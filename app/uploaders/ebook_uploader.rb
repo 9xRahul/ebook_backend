@@ -5,7 +5,7 @@ class EbookUploader < CarrierWave::Uploader::Base
     %w(pdf epub)
   end
 
-  # Instruct Cloudinary to upload the actual file as raw, rather than attempting to convert it to an image
+  # Tells Cloudinary to upload the actual file type,never attempting to convert it to an image
   process :resource_type => :raw
 
   def size_range
