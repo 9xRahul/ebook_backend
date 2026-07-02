@@ -1,0 +1,188 @@
+{
+	"info": {
+		"_postman_id": "c83f1246-1f6f-4d37-8854-9493f0b2f155",
+		"name": "Digital Ebook Library API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Ebooks",
+			"item": [
+				{
+					"name": "List all Ebooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Upload Ebook",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "ebook[title]",
+									"value": "Sample Book Title",
+									"type": "text"
+								},
+								{
+									"key": "ebook[author]",
+									"value": "Author Name",
+									"type": "text"
+								},
+								{
+									"key": "ebook[file]",
+									"type": "file",
+									"src": []
+								},
+								{
+									"key": "ebook[cover_image]",
+									"type": "file",
+									"src": []
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Specific Ebook",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "replace_with_ebook_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Search Ebooks",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks/search?q=ruby",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks",
+								"search"
+							],
+							"query": [
+								{
+									"key": "q",
+									"value": "ruby"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Get Ebook Download URL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks/:id/download",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks",
+								":id",
+								"download"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "replace_with_ebook_id"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Delete Ebook",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/ebooks/:id",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"ebooks",
+								":id"
+							],
+							"variable": [
+								{
+									"key": "id",
+									"value": "replace_with_ebook_id"
+								}
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
