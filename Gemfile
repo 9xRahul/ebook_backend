@@ -46,6 +46,6 @@ group :development, :test do
 end
 
 gem 'mongoid', '~> 9.0'
-gem 'carrierwave', '~> 3.0'
+gem 'carrierwave', '~> 3.1'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'cloudinary'
