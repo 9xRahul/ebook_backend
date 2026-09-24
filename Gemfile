@@ -45,7 +45,7 @@ group :development, :test do
   gem 'dotenv-rails'
 end
 
-gem 'mongoid', '~> 9.0'
+gem 'mongoid', '~> 9.1'
 gem 'carrierwave', '~> 3.0'
 gem 'carrierwave-mongoid', require: 'carrierwave/mongoid'
 gem 'cloudinary'
